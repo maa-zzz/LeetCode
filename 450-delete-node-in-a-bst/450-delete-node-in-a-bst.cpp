@@ -26,11 +26,11 @@ public:
                 if(root->left==NULL or root->right==NULL){
                     return root->left?root->left:root->right; //replace the node with its child
                 }
-                TreeNode* temp = root->left;                        //(or) TreeNode *temp = root->right;
-                while(temp->right != NULL){
+                TreeNode* temp = root->left; //replace the deleted note with the max of its left child
+                while(temp->right != NULL){ //delete the max from the left
                     temp=temp->right;
-                }     //      while(temp->left != NULL) temp = temp->left;
-                root->val = temp->val;                            //       root->val = temp->val;
+                }     
+                root->val = temp->val;                            
                 root->left = deleteNode(root->left, temp->val);
             }
         }
