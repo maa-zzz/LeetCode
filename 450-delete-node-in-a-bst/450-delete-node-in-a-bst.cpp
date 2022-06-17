@@ -31,8 +31,8 @@ public:
                     temp=temp->right;
                 }     
                 root->val = temp->val;                            
-                root->left = deleteNode(root->left, temp->val);
-            }
+                root->left = deleteNode(root->left, temp->val);//recursively deletes the element that
+            }                   //took place of the deleted child
         }
         return root;
     }
