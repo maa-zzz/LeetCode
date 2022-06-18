@@ -11,7 +11,7 @@ public:
         dp[0]=true;
         for(int i =0; i<n; i++){
             for(int j=sum; j>0; j--){
-                if(j>=nums[i] and dp[j-nums[i]]){
+                if(j>=nums[i] and dp[j-nums[i]]){ //check if sum of j-nums[i] is achievable
                     dp[j]=true;
                 }
             }
