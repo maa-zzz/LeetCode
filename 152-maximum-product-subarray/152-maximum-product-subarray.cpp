@@ -12,7 +12,7 @@ public:
             int temp2 = minn*nums[i];
             minn = min(min(temp2, temp1), nums[i]);
             maxx = max(max(temp2, temp1), nums[i]);
-            ans = max(max(ans, minn), maxx);
+            ans = max(ans, maxx);
         }
         return ans;
     }
