@@ -19,7 +19,7 @@ public:
         }
         int left = minDepth(root->left);
         int right = minDepth(root->right);
-        if(left==0 or right==0){
+        if(left==0 or right==0){ //if depth of one subtree is null, should return the min depth of the other subtree
             return left+right+1;
         }
         return min(left,right)+1;
