@@ -1,22 +1,29 @@
 class MyHashSet {
-public:
-    vector<bool> ans;
-    MyHashSet() {
-        ans.resize(1e6+1, false);
-    }
-    
+    public: 
     void add(int key) {
-        ans[key]=true;
+    auto it = find(arr.begin(),arr.end(),key);
+        if(it == arr.end())
+            arr.push_back(key);
     }
-    
+
     void remove(int key) {
-        ans[key]=false;
+        auto it = find(arr.begin(),arr.end(),key);
+        if(it!=arr.end())
+            arr.erase(it);
     }
-    
+
+
     bool contains(int key) {
-        return ans[key];
+         auto it = find(arr.begin(),arr.end(),key);
+            if(it == arr.end())
+                return false;
+        return true;
     }
+    private:
+    vector<int>arr;
+
 };
+
 
 /**
  * Your MyHashSet object will be instantiated and called as such:
