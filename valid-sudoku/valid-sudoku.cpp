@@ -6,13 +6,12 @@ public:
             for(int j=0;j<9;j++){
                 if(board[i][j] != '.'){
                     int curr = board[i][j]; 
-                    if(rows[i].count(curr) || cols[j].count(curr) ||
-                      blocks[(i/3)*3 + j/3].count(curr)){
+                    if(rows[i].count(curr) || cols[j].count(curr) ||  blocks[(i/3)*3 + j/3].count(curr)){
                         return false; 
                     }
                     rows[i].insert(curr);
                     cols[j].insert(curr);
-                    blocks[(i/3*3) + j/3].insert(curr);
+                    blocks[((i/3)*3) + j/3].insert(curr);//important formula 
                     }
             }
         }
