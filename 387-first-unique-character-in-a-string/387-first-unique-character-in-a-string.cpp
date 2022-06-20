@@ -1,18 +1,16 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        unordered_map <char,pair<int,int>> map;
-        int n = s.size();
-        for(int i=0; i<n; i++){
-            map[s[i]].first +=1;
-            map[s[i]].second = i;
+        //this is the second faster solution without hashmap
+        vector<int>arr(26,0);
+        for(int i=0; i<s.size(); i++){
+            arr[s[i]-'a']++;
         }
-        for(auto [c,p]:map){
-            if(p.first==1){
-                n = min(n, p.second);
+        for (int i=0; i <s.size(); i++) {
+            if (arr[s[i]-'a'] == 1) {
+                return i;
             }
         }
-        return n==s.size() ? -1: n;
+        return -1;
     }
 };
-
