@@ -1,3 +1,4 @@
+[Discussion Post (created on 20/5/2022 at 13:31)](https://leetcode.com/problems/design-hashset/discuss/2173632/Two-Implementation-Using-Vector)  
 <h2>  Design HashSet</h2><hr><div><p>Design a HashSet without using any built-in hash table libraries.</p>
 
 <p>Implement <code>MyHashSet</code> class:</p>
