@@ -1,17 +1,17 @@
 class Solution {
 public:
-    void solve(vector<int>& v, vector<int>& ds, vector<vector<int>>& ans, int idx, int target, int k) {
-        if (target == 0 and ds.size() == k) {
-            ans.push_back(ds);
+    void solve(vector<int>& v, vector<int>& temp, vector<vector<int>>& ans, int idx, int target, int k) {
+        if (target == 0 and temp.size() == k) {
+            ans.push_back(temp);
             return;
         }
         
         for (int i = idx; i < v.size(); i++) {
             if (i > idx and v[i] == v[i - 1]) continue;
             if (v[i] > target) break;
-            ds.push_back(v[i]);
-            solve(v, ds, ans, i + 1, target - v[i], k);
-            ds.pop_back();
+            temp.push_back(v[i]);
+            solve(v, temp, ans, i+1, target - v[i], k);
+            temp.pop_back();
         }
         
     }
