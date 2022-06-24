@@ -14,7 +14,8 @@ public:
             for (int j=1; j<=n; j++){
                 if (word1[i-1] == word2[j-1]){
                     dp[i][j] = dp[i-1][j-1];
-                } else {
+                } 
+                else {
                     dp[i][j] = min(dp[i-1][j-1], min(dp[i][j-1], dp[i-1][j]))+1;
                 }
             }
