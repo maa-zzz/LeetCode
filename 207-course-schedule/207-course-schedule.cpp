@@ -10,7 +10,7 @@ public:
                     return true;
             }
         }
-        vis[id] = 2;
+        vis[id] = 2; //0 gives tle cause of infinity loop
         return false;
     }
     bool canFinish(int n, vector<vector<int>>& pre) {
