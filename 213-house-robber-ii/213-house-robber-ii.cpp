@@ -5,7 +5,7 @@ public:
         if(n==1){
             return nums[0];
         }
-        vector <int> dp1(n), dp2(n);
+        vector <int> dp1(n,0), dp2(n,0);
         dp1[1]= nums[0];//considering 1st
         dp2[1]= nums[1];//not considering 1st
         for(int i=2; i<n; i++){
