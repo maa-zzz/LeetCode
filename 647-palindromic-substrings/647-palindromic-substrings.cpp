@@ -13,14 +13,10 @@ public:
     
     int countSubstrings(string s) {
         int ans = 0;
-        int l,h;
         int n = s.size();
         for(int i=0; i<n;i++){
-            l=h=i;
-            ans+=palindrome(s,l,h,n); //counting odd
-            l=i;
-            h=i+1;
-            ans+=palindrome(s,l,h,n);//counting even
+            ans+=palindrome(s,i,i,n); //counting odd
+            ans+=palindrome(s,i,i+1,n);//counting even
         }
         return ans;
     }
