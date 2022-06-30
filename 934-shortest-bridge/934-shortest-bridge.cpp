@@ -42,7 +42,7 @@ public:
                 int dist = abs(a.first-b.first) + abs(a.second-b.second) - 1;
                 min_dist = min(min_dist, dist);
             }
-        
+                                                //khoobsurat solution
         return min_dist;
     }
 };
