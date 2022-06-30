@@ -5,7 +5,7 @@ public:
         dp[s.size()]=1;
         for(int i=s.size()-1; i>=0; i--){
             for(auto w:wordDict){
-                if(i+w.size()<=s.size() and s.substr(i, w.size())==w){
+                if(i+w.size()<=s.size() and s.substr(i, w.size())==w){//check for substring 
                     dp[i]=dp[i+w.size()];
                 }
                 if(dp[i]){
