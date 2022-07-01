@@ -5,7 +5,7 @@ public:
         for(int i=1; i<s.length(); i++) {
             if (s[i] == s[i-1]) {
                 res += min(cost[i], cost[i-1]);
-                cost[i] = max(cost[i], cost[i-1]);
+                cost[i] = max(cost[i], cost[i-1]);//modifying cost[i] so that we dont need to save extra data
             }
         }
         return res;
