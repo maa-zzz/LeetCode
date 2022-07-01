@@ -9,7 +9,7 @@ public:
             for(int i=index; i<ranges.size(); i++){
                 if(i-ranges[i]<=mini and i+ranges[i]>maxi){ //make it a 2 pointer solution// pretty easy to understand
                     maxi = i+ranges[i];
-                    index = i;
+                    index = i; //added to stop running the loop completely every time
                 }
             }
             if(mini==maxi){
