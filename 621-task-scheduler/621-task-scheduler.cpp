@@ -1,33 +1,19 @@
 class Solution {
 public:
     int leastInterval(vector<char>& tasks, int n) {
-        unordered_map<char, int> counts;
-        for(auto c: tasks){
-            counts[c]++;
+        unordered_map<char,int>mp;
+        int count = 0;
+        for(auto e : tasks)
+        {
+            mp[e]++;
+            count = max(count, mp[e]);
         }
-        priority_queue<int> pq;
-        for(pair<char, int> count: counts){
-            pq.push(count.second);
-        }
-        int alltime = 0;
-        int cycle = n+1;
-        while(!pq.empty()){
-            int time = 0;
-            vector<int> temp;
-            for(int i=0; i<cycle; i++){
-                if(!pq.empty()){
-                    temp.push_back(pq.top());
-                    pq.pop();
-                    time+=1;
-                }
-            }
-            for(auto x:temp){
-                if(--x){
-                    pq.push(x);
-                }
-            }
-            alltime+=!pq.empty() ? cycle :time;
-        }
-        return alltime;
+        
+        int ans = (count-1)*(n+1);
+        for(auto e : mp) if(e.second == count){
+            ans+=1;
+        };
+        return max((int)tasks.size(), ans);
     }
 };
+//https://leetcode.com/problems/task-scheduler/discuss/370755/C%2B%2B-solution-95-time-and-space-with-good-explanation
