@@ -4,10 +4,12 @@ public:
         int mini = 0;
         int maxi = 0;
         int ans = 0;
+        int index = 0;
         while(maxi<n){
-            for(int i=0; i<ranges.size(); i++){
+            for(int i=index; i<ranges.size(); i++){
                 if(i-ranges[i]<=mini and i+ranges[i]>maxi){ //make it a 2 pointer solution// pretty easy to understand
                     maxi = i+ranges[i];
+                    index = i;
                 }
             }
             if(mini==maxi){
