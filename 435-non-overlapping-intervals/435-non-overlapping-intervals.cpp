@@ -13,7 +13,7 @@ public:
             }
             else{
                 ans+=1;
-                temp=min(temp, end);
+                temp=min(temp, end);//keep the event that ends faster
             }
         }
         return ans;
