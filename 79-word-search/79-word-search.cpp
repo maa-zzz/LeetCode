@@ -15,7 +15,7 @@ public:
             return false;
         char c = board[i][j];
         board[i][j] = '*';
-        string s = word.substr(1);
+        string s = word.substr(1);//taking one char at a  time
         bool ret = dfs(board,i-1,j,s) || dfs(board,i+1,j,s) || dfs(board,i,j-1,s) || dfs(board,i,j+1,s);
         board[i][j] = c;
         return ret;
