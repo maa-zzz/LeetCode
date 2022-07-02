@@ -3,7 +3,7 @@ public:
     bool dfs(int node, vector<vector<int>>& graph, vector<int>& visited, vector<int>& result){
         visited[node]=1;
         for(int i=0;i<graph[node].size();i++){
-            if(visited[graph[node][i]]==1)return false; 
+            if(visited[graph[node][i]]==1)return false; //detects cycle
             if(visited[graph[node][i]]==0){
                 if(!dfs(graph[node][i],graph,visited,result)) 
                     return false;
