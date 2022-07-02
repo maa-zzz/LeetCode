@@ -8,10 +8,11 @@ public:
         
         for(int i=0;i<n;i++){
             res[i]*=fromBegin;
-            fromBegin*=nums[i];
+            fromBegin*=nums[i]; //multiplying by digits behind it
             res[n-1-i]*=fromLast;
-            fromLast*=nums[n-1-i];
+            fromLast*=nums[n-1-i]; //multiplying by digits infront of it
         }
         return res;
     }
 };
+//brilliant thinking whoever thought of this
