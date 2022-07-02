@@ -10,7 +10,7 @@ public:
         }
         for (char c : keyPad[digits[index] - '0']) {
             path[index] = c;
-            backtrack(index + 1, path, digits);
+            backtrack(index + 1, path, digits); //memorise it man
         }
     }
     
