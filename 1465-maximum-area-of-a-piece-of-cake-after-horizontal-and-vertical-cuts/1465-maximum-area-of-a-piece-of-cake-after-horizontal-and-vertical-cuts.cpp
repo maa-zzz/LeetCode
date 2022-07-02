@@ -15,9 +15,9 @@ public:
         
         for(int i=1; i<horizontalCuts.size(); i++){
             if (b < horizontalCuts[i] - horizontalCuts[i-1]){
-                b = horizontalCuts[i] - horizontalCuts[i-1];
+                b = horizontalCuts[i] - horizontalCuts[i-1];   //multiple peices after the cut
             }
-        }
+        }                               //max area means max width and max length hihi
         for (int i=1; i<verticalCuts.size(); i++){
             if(l < verticalCuts[i] - verticalCuts[i-1]){
                 l = verticalCuts[i] - verticalCuts[i-1];
