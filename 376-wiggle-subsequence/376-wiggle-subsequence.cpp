@@ -6,7 +6,7 @@ public:
                  if(nums[i]>nums[i-1]) peak = valley + 1;
             else if(nums[i]<nums[i-1]) valley = peak + 1;
         }
-        return max(peak , valley );
+        return max(peak, valley);
     }
 };
 //https://leetcode.com/problems/wiggle-subsequence/discuss/2229495/C%2B%2B-O-(-N-)-oror-EXPLAINED-oror
