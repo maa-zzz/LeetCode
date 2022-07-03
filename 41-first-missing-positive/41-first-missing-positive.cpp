@@ -5,7 +5,7 @@ public:
             while (nums[i] > 0 && nums[i] <= nums.size() && nums[nums[i] - 1] != nums[i])
                 swap(nums[i], nums[nums[i] - 1]);
         }
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = 0; i < nums.size(); i++) // the missing positive integer would be in the range of  1 to n
             if (nums[i] != i + 1)
                 return i + 1;
         return nums.size() + 1;
