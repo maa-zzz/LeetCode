@@ -10,7 +10,7 @@ class Solution {
                     index.pop_back();
                     int sidx = index.size() > 0 ? index.back() : -1;
                     if(h * (i-sidx-1) > ret)
-                        ret = h * (i-sidx-1);
+                        ret = h * (i-sidx-1); //hella confusing line
                 }
                 index.push_back(i);
             }
