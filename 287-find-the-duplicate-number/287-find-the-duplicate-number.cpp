@@ -10,7 +10,6 @@ public:
                 break;
             }
             ref[nums[i]]=1;
-            ans = nums[i+1];
         }
         return ans;
     }
