@@ -2,7 +2,7 @@ class Solution {
 public:
         bool rec(vector <char> &s, int st) {
             if (st >= s.size()/2) return true;        
-            if (s[st] == s[s.size() - 1 - st]) 
+            if (s[st] == s[s.size() - 1 - st]) //beutiful
                 return rec(s, st + 1);
             else 
                 return false;
