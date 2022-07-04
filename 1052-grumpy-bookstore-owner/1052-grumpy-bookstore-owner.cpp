@@ -15,7 +15,7 @@ public:
 		for(int i=0, j=0; j<n; j++) {
 			sum += customers[j];
 			if(j - i == X)
-				sum -= customers[i++];
+				sum -= customers[i++]; //made already satisfied customers zerooo
 			secretly_satisfied = max(secretly_satisfied, sum);
 		}
 
