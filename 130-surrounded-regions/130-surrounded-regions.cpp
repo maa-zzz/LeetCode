@@ -23,8 +23,8 @@ public:
         int n = board[0].size();
         for(int i=1; i<m-1; i++){
             for(int j=1; j<n-1; j++){
-                dfs(board, i, 0);
-                dfs(board, i, n-1);
+                dfs(board, i, 0);           //just the boundary o's that are connected get replaced
+                dfs(board, i, n-1);         //any o's other than that are enclosed 
                 dfs(board, 0, j);
                 dfs(board, m-1, j);
             }
