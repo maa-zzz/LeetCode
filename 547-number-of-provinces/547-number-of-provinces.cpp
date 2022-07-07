@@ -4,8 +4,8 @@ public:
     void dfs(vector<vector<int>>& places, vector<bool>& visited, int i) {
         visited[i] = true;
         for(int j=0; j<visited.size(); j++){
-            if(i!=j and places[i][j] and !visited[j]){
-                dfs(places, visited, j);
+            if(i!=j and places[i][j] and !visited[j]){ //marking connected places as true
+                dfs(places, visited, j); //similar approach as numbere of islands
             }
         }
     }
