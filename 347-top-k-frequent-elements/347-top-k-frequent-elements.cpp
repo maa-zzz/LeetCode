@@ -3,12 +3,7 @@ public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
         map<int, int> mapi;
         for(int i=0; i<nums.size(); i++){
-            if(mapi.find(nums[i])==mapi.end()){
-                mapi[nums[i]]=1;
-            }
-            else{
-                mapi[nums[i]]+=1;
-            }
+            mapi[nums[i]]+=1;
         }
         vector<int> res;
         priority_queue<pair<int,int>> pq; 
