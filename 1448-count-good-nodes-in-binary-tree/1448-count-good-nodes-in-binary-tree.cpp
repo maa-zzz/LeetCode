@@ -25,7 +25,7 @@ public:
     }
     
     int goodNodes(TreeNode* root) {
-        counter(root, INT_MIN);
+        counter(root, root->val);
         return ans;
     }
 };
