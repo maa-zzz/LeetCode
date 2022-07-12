@@ -11,7 +11,7 @@ public:
     }
     void dfs(TreeNode* root, long sum){
         if(!root)return;
-        if(root->val==sum)ans++;
+        if(root->val==sum)ans+=1;
         dfs(root->left,sum-root->val);
         dfs(root->right,sum-root->val);
     }
