@@ -26,12 +26,7 @@ public:
         }
         return nodes;
     }
-};
-    
-    
-    
-    
-    
+}; 
     
     /*   
     void inorder(TreeNode* root,vector<int>& ans){
