@@ -18,13 +18,13 @@ private:
             res.push_back(nQueens);
             return;
         }
-        for (int col = 0; col != n; ++col)
-            if (flag[col] && flag[n + row + col] && flag[4 * n - 2 + col - row]) {
-                flag[col] = flag[n + row + col] = flag[4 * n - 2 + col - row] = 0;
+        for (int col = 0; col != n; col++)
+            if (flag[col] && flag[n+row+col] && flag[4*n-2+col-row]) {
+                flag[col] = flag[n+row+col] = flag[4*n-2+col-row] = 0;
                 nQueens[row][col] = 'Q';
                 solveNQueens(res, nQueens, flag, row + 1, n);
                 nQueens[row][col] = '.';
-                flag[col] = flag[n + row + col] = flag[4 * n - 2 + col - row] = 1;
+                flag[col] = flag[n+row+col] = flag[4*n-2+col-row] = 1;
             }
     }
 };
