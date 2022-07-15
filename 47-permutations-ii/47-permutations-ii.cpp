@@ -9,9 +9,10 @@ public:
 private:
     void permute(vector<int> nums, int start, vector<vector<int>>& perms) {
         int n = nums.size();
-        if (start == n - 1) {
+        if (start == n-1) {
             perms.push_back(nums);
-        } else {
+        } 
+        else {
             for (int i = start; i < n; i++) {
                 if ((i == start) || (nums[i] != nums[start])) {
                     swap(nums[i], nums[start]);
