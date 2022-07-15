@@ -13,10 +13,10 @@ private:
             perms.push_back(nums);
         } 
         else {
-            for (int i = start; i < n; i++) {
+            for (int i=start; i<n; i++) {
                 if ((i == start) || (nums[i] != nums[start])) {
                     swap(nums[i], nums[start]);
-                    permute(nums, start + 1, perms);
+                    permute(nums,start+1,perms);
                 }
             }
         }
