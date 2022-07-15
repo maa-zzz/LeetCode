@@ -16,8 +16,7 @@ public:
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
                 if(grid[i][j]==1){
-                    int temp = dfs(grid,i,j);
-                    area = max(area, temp);
+                    area = max(area, dfs(grid,i,j));
                 }
             }
         }
