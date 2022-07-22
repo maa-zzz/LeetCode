@@ -26,7 +26,8 @@ public:
                 p->next = nxt;
                 if(nxt) nxt->prev = p;
 
-            } else{
+            } 
+            else{
                 p = p->next;
             }
         }
