@@ -29,3 +29,5 @@ public:
         return NULL;
     }
 };
+// L1 is defined as the distance between the head point and entry point
+// L2 is defined as the distance between the entry point and the meeting point
