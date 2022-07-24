@@ -49,7 +49,7 @@ public:
             slow = slow->next;
             fast = fast->next->next;
         }
-        prev->next = NULL;
+        prev->next = NULL; //breaking up the link else whole list will be fed into the function
         l1 = sortList(head);
         l2 = sortList(slow);
         return msort(l1,l2);
