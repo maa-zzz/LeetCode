@@ -3,8 +3,7 @@ public:
     int leastInterval(vector<char>& tasks, int n) {
         unordered_map<char,int>mp;
         int count = 0;
-        for(auto e : tasks)
-        {
+        for(auto e : tasks){
             mp[e]++;
             count = max(count, mp[e]);
         }
