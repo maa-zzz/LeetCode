@@ -9,7 +9,7 @@ public:
         for(int i = sq; i < n+1; i++) {
             cache[i] = min(cache[i-sq] + 1,cache[i]);
         }
-        count++;
+        count+=1;
     }
     return cache[n];
     }
