@@ -1,12 +1,11 @@
 class Solution {
 public:
+    int dp[20]{};
     int numTrees(int n) {
-        long long int x = 1;
-        for (int i=1; i <=n; i++) {
-            x *= (4*i-2);
-            x /= (i+1);
-        }
-        return x;
-        
+        if(n <= 1) return 1;
+        if(dp[n]) return dp[n];
+        for(int i = 1; i <= n; i++) 
+            dp[n] += numTrees(i-1) * numTrees(n-i);//left and right 
+        return dp[n];
     }
 };
