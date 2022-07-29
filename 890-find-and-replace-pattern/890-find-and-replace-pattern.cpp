@@ -9,7 +9,7 @@ public:
     bool match(string& w1, string& w2) {
         unordered_map<char, char> A, B;
         for(int i = 0; i < size(w1); i++) 
-            if( (A.count(w1[i]) && A[w1[i]] != w2[i]) || 
+            if( (A.count(w1[i]) && A[w1[i]] != w2[i]) ||  //tough to figure out logic
                 (B.count(w2[i]) && B[w2[i]] != w1[i]) ) 
                 return false; 
             else
