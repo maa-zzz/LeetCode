@@ -6,7 +6,7 @@ public:
         int n = mat[0].size();
         for(int i=0; i<m; i++){
             for(int j=0; j<n; j++){
-                mp[i-j].push(mat[i][j]);
+                mp[i-j].push(mat[i][j]); //i-j coz of unique indexes heh he
             }
         }
         for(int i=0; i<m; i++){
