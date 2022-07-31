@@ -11,6 +11,6 @@ public:
         for(int i=0; i<26; i++){
             ans+=abs(a[i]-b[i]);
         }
-        return ans/2;
+        return ans/2; // divide coz ans counts twice (2 char replaces at a time)
     }
 };
