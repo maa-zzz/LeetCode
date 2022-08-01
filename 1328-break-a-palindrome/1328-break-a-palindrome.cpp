@@ -1,0 +1,17 @@
+class Solution {
+public:
+    string breakPalindrome(string palindrome) {
+        int n = palindrome.size();
+        if(n<2){
+            return "";
+        }
+        for(int i=0; i<n/2; i++){
+            if(palindrome[i]!='a'){
+                palindrome[i]='a';
+                return palindrome;
+            }
+        }
+        palindrome[n-1] = 'b'; //edge if all is a
+        return palindrome;
+    }
+};
