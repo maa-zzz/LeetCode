@@ -1,7 +1,7 @@
 class Solution {
 public:
   int nthSuperUglyNumber(int n, vector<int>& primes) {
-    priority_queue<long long, vector<long long>, std::greater<long long>> pq;
+    priority_queue<long long, vector<long long>, greater<long long>> pq;
     pq.push(1);
     
     int i = 0;
