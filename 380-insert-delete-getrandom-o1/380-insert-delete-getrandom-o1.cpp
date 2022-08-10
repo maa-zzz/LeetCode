@@ -22,8 +22,8 @@ public:
             return false;
         }
         int index = mp[val];
-        mp[v[v.size()-1]] = index;
-        swap(v[index], v[v.size()-1]);
+        mp[v.back()] = index;
+        swap(v[index], v.back());
         v.pop_back();
         mp.erase(val);
         return true;
