@@ -1,19 +1,39 @@
 class Solution {
 public:
-    int fill(vector<vector<int>>& g, int i, int j) {
-        if (i < 0 || j < 0 || i >= g.size() || j >= g[i].size() || g[i][j])
-            return 0;
-        return (g[i][j] = 1) + fill(g, i + 1, j) + fill(g, i, j + 1) 
-            + fill(g, i - 1, j) + fill(g, i, j - 1);
+    
+    void fill(vector<vector<int>>& grid, int i, int j) {
+        if(i<0 or j<0 or i>=grid.size() or j>=grid[0].size() or grid[i][j]){
+            return;
+        }
+        grid[i][j]=1;
+        fill(grid,i+1,j);
+        fill(grid,i,j+1);
+        fill(grid,i,j-1);
+        fill(grid,i-1,j);
+        
     }
-    int closedIsland(vector<vector<int>>& g, int res = 0) {
-        for (int i = 0; i < g.size(); ++i)
-            for (int j = 0; j < g[i].size(); ++j)
-                if (i * j == 0 || i == g.size() - 1 || j == g[i].size() - 1)
-                    fill(g, i, j);
-        for (int i = 0; i < g.size(); ++i)
-            for (int j = 0; j < g[i].size(); ++j)
-                res += fill(g, i, j) > 0;
-        return res;
+    
+    int closedIsland(vector<vector<int>>& grid) {
+        int m = grid.size();
+        int n = grid[0].size();
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if(i*j==0 or i==m-1 or j==n-1){
+                    if(!grid[i][j]){
+                        fill(grid, i, j);
+                    }
+                }
+            }
+        }
+        int ans = 0;
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
+                if(!grid[i][j]){
+                    ans+=1;
+                    fill(grid, i, j);
+                }
+            }
+        }
+        return ans;
     }
 };
