@@ -3,7 +3,7 @@ public:
     int deleteAndEarn(vector<int>& nums) {
         int n = 10001;
         //take the total sum by each number
-        vector<int> sum(n, 0);
+        unordered_map <int,int> sum;
         vector<int> dp(n, 0);
         for(auto num: nums){
             sum[num] += num;
