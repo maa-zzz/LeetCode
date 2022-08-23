@@ -1,13 +1,21 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        stack<int> start;
+        queue<int> end;
+
+        ListNode* curr = head;
+        
+        while(curr != NULL){ start.push(curr->val); end.push(curr->val); curr = curr->next;}
+        
+        while(!start.empty() && !end.empty()){
+            if(start.top() != end.front()) return false;
+            start.pop(); end.pop();
+        }
+        
+        return true;
+    }
+};
 // class Solution {
 // public:
 //     bool isPalindrome(ListNode* head) {
@@ -28,18 +36,18 @@
 //         return true;
 //     }
 // };
-class Solution {
-public:
-    ListNode* temp;
-    bool isPalindrome(ListNode* head) {
-        temp = head;
-        return check(head);
-    }
+// class Solution {
+// public:
+//     ListNode* temp;
+//     bool isPalindrome(ListNode* head) {
+//         temp = head;
+//         return check(head);
+//     }
     
-    bool check(ListNode* p) {
-        if (NULL == p) return true;
-        bool isPal = check(p->next) & (temp->val == p->val);
-        temp = temp->next;
-        return isPal;
-    }
-};
+//     bool check(ListNode* p) {
+//         if (NULL == p) return true;
+//         bool isPal = check(p->next) & (temp->val == p->val);
+//         temp = temp->next;
+//         return isPal;
+//     }
+// };
