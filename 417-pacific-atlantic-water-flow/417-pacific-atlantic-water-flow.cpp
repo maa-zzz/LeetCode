@@ -22,7 +22,7 @@ public:
         vector<vector<int>> ans;
         int m = heights.size();
         int n = heights[0].size();
-        if(m==0 or n==0){
+        if(!(m or n)){
             return ans;
         }
         vector<vector<bool>> pacific(m,vector<bool>(n));
