@@ -27,3 +27,8 @@ public:
         return ans;
     }
 };
+// Let's say query is [left,right].
+// So in simple words we have to findposition(p1)(left<=p1<=right) of candle which is closest to left and position(p2)(left<=p2<=right) of candle which is closest to right.
+// After finding p1 and p2 we have to find number of plates between these two positions.
+// So for finding p1 and p2 use forward and backward array and store position of latest candle while iteratig over string in forward and backward direction respectively.
+// For number of plates between any two position we can use prefix array.
