@@ -1,7 +1,7 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode *pre = new ListNode(0), *cur = head;
+        ListNode *pre = new ListNode(NULL), *cur = head;
         pre -> next = head;
         while (cur && cur -> next) {
             ListNode* temp = cur -> next;
