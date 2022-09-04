@@ -42,7 +42,7 @@ public:
         }
         dfs(root->left, K-1);
         dfs(root->right, K-1);
-        dfs(parent[root], K-1); //to go up this is what i was missing
+        dfs(parent[root], K-1); 
     }
     
     vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
