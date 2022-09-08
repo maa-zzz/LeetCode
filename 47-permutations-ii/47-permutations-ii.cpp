@@ -8,12 +8,11 @@ public:
     }
 private:
     void permute(vector<int> nums, int start, vector<vector<int>>& perms) {
-        int n = nums.size();
-        if (start == n-1) {
+        if (start == nums.size()) {
             perms.push_back(nums);
         } 
         else {
-            for (int i=start; i<n; i++) {
+            for (int i=start; i<nums.size(); i++) {
                 if ((i == start) || (nums[i] != nums[start])) {
                     swap(nums[i], nums[start]);
                     permute(nums,start+1,perms);
