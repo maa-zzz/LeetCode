@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<int>> permuteUnique(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
+        sort(nums.begin(), nums.end()); //sort to see repeation checks
         vector<vector<int>> perms;
         permute(nums, 0, perms);
         return perms;
