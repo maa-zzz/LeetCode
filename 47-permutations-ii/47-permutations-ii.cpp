@@ -13,7 +13,7 @@ private:
         } 
         else {
             for (int i=start; i<nums.size(); i++) {
-                if ((i == start) || (nums[i] != nums[start])) {
+                if ((i == start) || (nums[i] != nums[start])) { //has to be a different number
                     swap(nums[i], nums[start]);
                     permute(nums,start+1,perms);
                 }
