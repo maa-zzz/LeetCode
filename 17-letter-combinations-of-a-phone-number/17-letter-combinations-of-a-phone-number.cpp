@@ -4,7 +4,7 @@ public:
     string keyPad[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "qprs", "tuv", "wxyz"};
     
     void backtrack(int index, string& path, const string& digits) {
-        if (index == digits.size()) {
+        if (index==digits.size()) {
             ans.push_back(path);
             return;
         }
