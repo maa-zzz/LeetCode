@@ -1,22 +1,26 @@
 class Solution {
 public:
     
-    int palindrome(string s, int l, int h, int n){            
-        int ans=0;
-        while(l>=0 and h<n and s[l]==s[h]){
-            ans+=1;
-            l-=1;
-            h+=1;
+    int ans = 0;
+    
+    void pdrome(string&s, int i, int j){
+        if(i<0 or j>=s.size()){
+            return;
         }
-        return ans;
+        if(s[i]==s[j]){
+            ans+=1;
+            pdrome(s,i-1, j+1);
+        }
+        else{
+            return;
+        }
     }
     
     int countSubstrings(string s) {
-        int ans = 0;
         int n = s.size();
-        for(int i=0; i<n;i++){
-            ans+=palindrome(s,i,i,n); //counting odd
-            ans+=palindrome(s,i,i+1,n);//counting even
+        for(int i=0; i<n; i++){
+            pdrome(s,i,i);
+            pdrome(s,i,i+1);
         }
         return ans;
     }
