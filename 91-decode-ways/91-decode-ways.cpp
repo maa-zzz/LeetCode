@@ -10,7 +10,7 @@ public:
             }
             else{
                 ans[i]=ans[i+1];
-                if(i<n-1 and (s[i]=='1' or (s[i]=='2' and s[i+1]<'7'))){ //traverse backwards
+                if(i<n-1 and (s[i]=='1' or (s[i]=='2' and s[i+1]<='6'))){ 
                     ans[i]+=ans[i+2];
                 }
             }
