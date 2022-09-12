@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minInsertions(string s) {
-        int m = s.size();
+        int m = s.size(); //hard solved by self
         vector<vector<int>> dp(m+1, vector<int>(m+1,0));
         string t = s;
         reverse(t.begin(), t.end());
