@@ -17,7 +17,7 @@ public:
         return true;
     }
     
-    bool remove(int val) {
+    bool remove(int val) {          //easy understanding give time
         if(mp.find(val)==mp.end()){
             return false;
         }
