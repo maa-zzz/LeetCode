@@ -8,7 +8,6 @@ public:
         else{
             ans = 0;//definetly works
         }
-        vector<int>price;
  //you know there is a solution
                                       // after you reach end of the array with positive price
         int total = 0;                          //no need to iterate again as that index is the answer
